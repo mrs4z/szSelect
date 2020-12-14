@@ -1,0 +1,138 @@
+
+.selector__div {
+  padding-top: 15px;
+  & > div {
+    margin-bottom: 15px;
+  }
+}
+
+.modal-animate {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.selector {
+  max-width: 300px;
+  border: 1px solid #656ef9;
+  border-radius: 4px;
+  position: relative;
+
+  &__main {
+    box-sizing: border-box;
+    //background: #656ef9 !important;
+    //color: #f0f2fb !important;
+    color: #656ef9;
+    cursor: pointer;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 10px;
+    padding-right: 10px;
+    transition: all .2s ease-in-out;
+    &-title {
+      margin-right: 10px;
+    }
+
+    &:hover {
+      background: #656ef9;
+      color: #fff;
+    }
+  }
+
+  &__modal {
+    position: absolute;
+    left: -1px;
+    width: 100%;
+    min-height: 40px;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    background: #fff;
+    border: 1px solid #656ef9;
+    z-index: 999999;
+
+    &-content {
+      padding: 10px;
+      padding-bottom: 0px !important;
+
+      &-search {
+        & > div:first-child {
+          font-size: 10pt;
+          margin-bottom: 10px;
+          color: #fff;
+        }
+
+        &-input {
+          width: 100%;
+          box-sizing: border-box;
+          border-radius: 4px;
+          outline: none;
+          border: 1px solid #656ef9;
+          background: transparent;
+          padding: 5px;
+          box-sizing: border-box;
+          font-size: 10pt;
+          color: #656ef9;
+          transition: .2s ease-in-out;
+
+          &::placeholder {
+            color: #656ef9;
+          }
+
+          &:focus {
+            background: #656ef9;
+            color: #fff;
+          }
+        }
+      }
+    }
+
+    &-item {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      height: 40px;
+
+      &-title {
+        margin-left: 10px;
+      }
+
+      &-active {
+        margin-right: 10px;
+      }
+
+      &:hover {
+        cursor: pointer;
+        background: lighten(#656ef9, 5);
+        color: #fff;
+      }
+
+      &.active {
+        background: #656ef9;
+        color: #fff;
+      }
+
+      &.selected {
+        background: lighten(#656ef9, 5) !important;
+        color: #fff;
+      }
+    }
+  }
+}
+
+.selector.active > .selector__main {
+  background: #656ef9;
+  color: #fff;
+}
+
+.selector.active {
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+.selector.active > .selector__main > .selector__main-arrow.flip {
+  transform-origin: center;
+  transform: rotate(180deg);
+}
