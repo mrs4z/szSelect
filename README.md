@@ -1,8 +1,8 @@
 # szSelect
 Данный компонент заменяет стандартный select.
 
-![example selector2](https://github.com/mrs4z/szSelect/blob/master/res/selector1.png)
-![example selector2](https://github.com/mrs4z/szSelect/blob/master/res/selector2.png)
+![example selector2](https://github.com/mrs4z/szSelect/blob/main/res/selector1.png?raw=true)
+![example selector2](https://github.com/mrs4z/szSelect/blob/main/res/selector2.png?raw=true)
 
 # Требования
 * jQuery 3.1.4
